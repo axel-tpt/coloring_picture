@@ -1,5 +1,6 @@
 from PIL import Image
 from math import sqrt
+import os
 
 # Render the image with the colors
 # Input:
@@ -36,5 +37,7 @@ def render(image, nb_cases, color_list, tab_colors_in_image, image_name):
                     pixels[x, y] = (color[0], color[1], color[2])
 
     # ---- Save the image
-    image.save('colorized_' + image_name)
+    if not os.path.exists('rendered'):
+        os.makedirs('rendered')
+    image.save('rendered/colorized_' + image_name)
     return 1

@@ -4,8 +4,8 @@ import argparse
 from PIL import Image
 from math import sqrt
 
-from color import colors
-from rendered import render
+from coloring.color import colors
+from coloring.rendered import render
 # -----------------
 
 # ---- Main ----
